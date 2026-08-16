@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# The typeset PDF is distributed via Ko-fi, not from this repository.
+abundant-and-uncurated.pdf
+
+# Captured full text of third-party copyrighted papers. Kept locally so every
+# citation can be re-checked mechanically; NOT redistributed from a public repo.
+# Provenance survives in .research/sources.jsonl (URL + hash) and the exact
+# quoted substrings survive in .research/claims.jsonl.
+.research/snapshots/

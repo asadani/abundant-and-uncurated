@@ -1,0 +1,130 @@
+phase: reported
+question: >
+  Given that machine-generated data is abundant while human-curated data is scarce
+  and costly, what division of labour between the two is actually supported by
+  evidence, and what specifically makes human curation expensive enough to remain
+  the binding constraint?
+lens: academic
+deliverable: capstone journal paper
+started: 2026-08-16T00:00:00Z
+updated: 2026-08-16T00:00:00Z
+sub_questions:
+  - id: sq1
+    text: What happens to models trained on model-generated data, and does replace-vs-accumulate change the outcome?
+  - id: sq2
+    text: Where does synthetic data demonstrably work, and on what conditions does the gain depend?
+  - id: sq3
+    text: What are the documented components of human curation cost, and which dominates?
+  - id: sq4
+    text: How well does LLM-as-judge and LLM annotation agree with human judgement, and where does it fail?
+  - id: sq5
+    text: Is high-quality human text actually running out, or is the scarcity economic and organisational?
+notes: >
+  User supplied prior findings from an earlier session (layered pipeline claim, an
+  83%/24-person user study, "model collapse is avoidable by accumulating"). These
+  are registered as leads to verify in gather, not as premises.
+
+gather:
+  sources: 27
+  tiers: {T2: 12, T3: 15, T4: 0}
+  distinct_works: 23
+  duplicate_sids_abs_plus_fulltext:
+    - [s-002, s-003]
+    - [s-007, s-010]
+    - [s-020, s-023]
+    - [s-021, s-022]
+    - [s-006, s-026]
+  coverage:
+    sq1: [s-001, s-002, s-003, s-004, s-005, s-012, s-018, s-025]
+    sq2: [s-008, s-011, s-013, s-016, s-019, s-024, s-025]
+    sq3: [s-015, s-022, s-023, s-027]
+    sq4: [s-007, s-008, s-009, s-010, s-013, s-027]
+    sq5: [s-006, s-014, s-017, s-026]
+  disconfirming_captured:
+    - s-004   # model collapse critique: eight definitions, unrealistic assumptions
+    - s-013   # RLAIF: AI feedback matches human feedback
+    - s-019   # Absolute Zero: SOTA reasoning with zero external data
+    - s-027   # PNAS: LLM beats crowd workers by ~25pp at lower cost
+  gaps:
+    - >
+      sq3 is the thinnest arm: 4 sources, and no peer-reviewed source giving a
+      cost-per-label breakdown for EXPERT curation. Vendor pricing exists but is
+      T4 and was not registered. Cost claims in the report must lean on Llama 2
+      scale figures and Gilardi's crowd-worker comparison, both of which have
+      known limits.
+    - >
+      Aroyo and Welty (2015), "Truth Is a Lie", was sought as the theory source
+      for annotator disagreement as signal. Wiley returned 403 and the AAAI
+      mirror 404s. NOT registered and NOT citable in the report.
+    - >
+      No T1 source in the corpus. There is no systematic review with a
+      registered protocol on this question; s-024 is a narrative survey, tiered
+      T3 accordingly. The report must not imply meta-analytic support.
+    - >
+      Corpus is English-language and skews to the frontier-lab and HCI
+      literatures. No economics-of-data-markets source.
+
+verify:
+  claims: 37
+  pass: 35
+  fail: 2
+  quote_bindings_checked: 37
+  quote_misses: 0
+  locator_kinds: {quote: 37}
+  auditor_note: >
+    Every binding uses a quote locator, so gate rule G7 (claim-auditor required
+    for non-quote locators) does not apply. The claim-auditor AGENT was not
+    dispatched: this session operates under an instruction not to spawn agents
+    unless the user asks. In its place, load-bearing claims c-010, c-015 and
+    c-025 were audited by re-reading the surrounding passage in the snapshot.
+    That is a weaker check than a fresh-context auditor and is recorded as such.
+  audit_findings:
+    - >
+      c-015: the Absolute Zero result beats expert-curated human data by 0.3
+      absolute percentage points on one category. The headline framing survives
+      but is close to a tie. Recorded as c-035; the report must state the margin.
+    - >
+      c-010: the source's abstract makes human and model verifiers sound
+      interchangeable. Reading on, the paper states gains plateau or reverse
+      unless the verifier is perfectly reliable (c-036) and that retraining
+      converges to the verifier's own knowledge centre (c-037). This inverts the
+      apparent disconfirmation into support for an exogenous human signal.
+  failed_claims:
+    - c-033   # golden datasets from production traces - nearest source runs the other way
+    - c-034   # layered LLM-annotator pipeline is "standard" - no source establishes it
+  inherited_claim_disposition:
+    verified: >
+      The 83% / N=24 figure is real (c-030), traced to arXiv 2511.04478. But it
+      measures TOOL PREFERENCE, not data quality. "Synthetic as effective as
+      hand-crafted" is real (c-029) and scoped to judge-criteria refinement.
+      "Accumulating avoids collapse" is real (c-004).
+    corrected: >
+      The inherited summary said synthetic data was "as effective ... aligning
+      with human preferences"; the paper says "user expectations".
+    failed: >
+      "Golden datasets from production traces" (c-033) and "layered pipeline is
+      now standard" (c-034) could not be established from any captured source.
+
+synthesize:
+  conclusions: [c-100, c-101, c-102, c-103, c-104, c-105, c-106]
+  total_claims: 44
+  bindings: 56
+  quote_misses: 0
+  mixed_stance: [c-100, c-104, c-106]
+  single_source_risk: >
+    c-101 and c-106 both rest on s-018 for the knowledge-centre bound. It is one
+    T3 preprint at small scale. If withdrawn, the central argument weakens from a
+    formal result to a plausibility argument. Named in synthesis.md.
+  low_confidence: [c-102]
+
+report:
+  path: .research/report.md
+  gate_verdict: PASS
+  exit_code: 0
+  hard_failures: 0
+  warnings: 17
+  claims_in_ledger: 45
+  claims_cited: 43
+  uncited_by_design: [c-033, c-034]   # both failed verification; correctly absent
+  verification_report: .research/verification-report.md
+  completed: 2026-08-16

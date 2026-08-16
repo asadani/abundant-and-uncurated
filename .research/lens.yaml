@@ -1,0 +1,55 @@
+lens: academic
+name: Academic and scientific
+use_when: >
+  Literature reviews, what the evidence says on a research question, the state of
+  a field, whether a finding replicates, tracing where a claim originated.
+
+tiers:
+  T1: >
+    Systematic reviews and meta-analyses with a registered protocol; large
+    pre-registered trials; the primary dataset itself.
+  T2: >
+    Peer-reviewed primary studies in journals with real review, and replication
+    studies. Design still matters within this tier -- an underpowered randomised
+    trial is not automatically above a large well-controlled observational study.
+  T3: >
+    Preprints, conference papers, dissertations, and working papers. In
+    fast-moving computational fields this is where the frontier actually lives;
+    in clinical fields it is a much weaker signal.
+  T4: >
+    Press releases about studies, science journalism, textbooks for current
+    findings, predatory-venue publications, and anything citing a study it
+    clearly has not read.
+
+recency:
+  default_window_years: 10
+  note: >
+    Field-dependent, and the window is the wrong question. Check instead whether
+    the finding replicated, whether it was retracted, and whether a later
+    systematic review superseded it. An influential 2010 paper that failed to
+    replicate is worse than useless -- it is actively misleading.
+
+strong_evidence: >
+  A pre-registered study with adequate power that replicated independently, or a
+  systematic review whose protocol was registered before the search. Effect
+  sizes with confidence intervals beat p-values; both beat a narrative summary.
+
+traps:
+  - "Citing an abstract, or citing a paper via another paper's description of it."
+  - "Retracted or corrected papers that keep accumulating citations."
+  - "Reading a press release's framing as the paper's finding."
+  - "Treating statistical significance as effect size, or as practical importance."
+  - "A literature that looks unanimous because null results were never published."
+  - "Predatory journals with authoritative-sounding names."
+  - "A vibe citation: real authors, real journal, a title that does not exist."
+
+preferred_sources:
+  - Semantic Scholar, OpenAlex, Crossref, PubMed, arXiv
+  - Retraction Watch and journal correction notices
+  - Registries: PROSPERO, ClinicalTrials.gov, OSF
+  - The paper's own supplementary material and data availability statement
+
+verification_note: >
+  Resolve every reference to a DOI or a stable identifier and open it. A
+  fabricated citation that blends two real papers is the hardest kind to catch by
+  eye and the easiest to catch by lookup.

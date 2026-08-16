@@ -1,0 +1,13 @@
+# The verification workspace is byte-sensitive.
+#
+# sources.jsonl records a hash for every snapshot, and claims.jsonl binds each
+# claim to an exact quoted substring inside one. If git rewrites line endings on
+# checkout, the hashes stop matching and the gate fails on a fresh clone for a
+# reason that has nothing to do with the research. Preserve bytes exactly.
+.research/snapshots/** -text
+.research/*.jsonl       -text
+
+# Rendered output.
+*.pdf  binary
+*.html text eol=lf
+*.md   text eol=lf

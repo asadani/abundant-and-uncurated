@@ -1,0 +1,476 @@
+{
+ "sid2n": {
+  "s-001": 1,
+  "s-005": 2,
+  "s-002": 3,
+  "s-003": 3,
+  "s-004": 4,
+  "s-006": 5,
+  "s-026": 5,
+  "s-014": 6,
+  "s-007": 7,
+  "s-010": 7,
+  "s-009": 8,
+  "s-008": 9,
+  "s-011": 10,
+  "s-012": 11,
+  "s-013": 12,
+  "s-015": 13,
+  "s-016": 14,
+  "s-017": 15,
+  "s-018": 16,
+  "s-019": 17,
+  "s-020": 18,
+  "s-023": 18,
+  "s-021": 19,
+  "s-022": 19,
+  "s-024": 20,
+  "s-025": 21,
+  "s-027": 22
+ },
+ "cmap": {
+  "c-001": {
+   "n": [
+    1
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-002": {
+   "n": [
+    1
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-003": {
+   "n": [
+    3
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-004": {
+   "n": [
+    3
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-005": {
+   "n": [
+    4
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-006": {
+   "n": [
+    4
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-007": {
+   "n": [
+    2
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-008": {
+   "n": [
+    11
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-009": {
+   "n": [
+    11
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-010": {
+   "n": [
+    16
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-011": {
+   "n": [
+    10
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-012": {
+   "n": [
+    10
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-013": {
+   "n": [
+    21
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-014": {
+   "n": [
+    14
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "low"
+  },
+  "c-015": {
+   "n": [
+    17
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-016": {
+   "n": [
+    17
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-017": {
+   "n": [
+    13
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-018": {
+   "n": [
+    13
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-019": {
+   "n": [
+    13
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-020": {
+   "n": [
+    19
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-021": {
+   "n": [
+    18
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-022": {
+   "n": [
+    18
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-023": {
+   "n": [
+    7
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-024": {
+   "n": [
+    7
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-025": {
+   "n": [
+    8
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-026": {
+   "n": [
+    8
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-027": {
+   "n": [
+    22
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-028": {
+   "n": [
+    22
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-029": {
+   "n": [
+    9
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "low"
+  },
+  "c-030": {
+   "n": [
+    9
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "low"
+  },
+  "c-031": {
+   "n": [
+    5
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-032": {
+   "n": [
+    15
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  },
+  "c-033": {
+   "n": [
+    9
+   ],
+   "verified": "fail",
+   "stance": "contradicted",
+   "conf": "low"
+  },
+  "c-034": {
+   "n": [
+    20
+   ],
+   "verified": "fail",
+   "stance": "supported",
+   "conf": "low"
+  },
+  "c-035": {
+   "n": [
+    17
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-036": {
+   "n": [
+    16
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-037": {
+   "n": [
+    16
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-100": {
+   "n": [
+    3,
+    4
+   ],
+   "verified": "pass",
+   "stance": "mixed",
+   "conf": "moderate"
+  },
+  "c-101": {
+   "n": [
+    11,
+    16
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-102": {
+   "n": [
+    10,
+    14
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "low"
+  },
+  "c-103": {
+   "n": [
+    13,
+    18,
+    19
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-104": {
+   "n": [
+    7,
+    8,
+    22
+   ],
+   "verified": "pass",
+   "stance": "mixed",
+   "conf": "moderate"
+  },
+  "c-105": {
+   "n": [
+    5,
+    15
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "moderate"
+  },
+  "c-106": {
+   "n": [
+    8,
+    11,
+    16
+   ],
+   "verified": "pass",
+   "stance": "mixed",
+   "conf": "moderate"
+  },
+  "c-038": {
+   "n": [
+    8
+   ],
+   "verified": "pass",
+   "stance": "supported",
+   "conf": "high"
+  }
+ },
+ "groups": [
+  [
+   "s-001"
+  ],
+  [
+   "s-005"
+  ],
+  [
+   "s-002",
+   "s-003"
+  ],
+  [
+   "s-004"
+  ],
+  [
+   "s-006",
+   "s-026"
+  ],
+  [
+   "s-014"
+  ],
+  [
+   "s-007",
+   "s-010"
+  ],
+  [
+   "s-009"
+  ],
+  [
+   "s-008"
+  ],
+  [
+   "s-011"
+  ],
+  [
+   "s-012"
+  ],
+  [
+   "s-013"
+  ],
+  [
+   "s-015"
+  ],
+  [
+   "s-016"
+  ],
+  [
+   "s-017"
+  ],
+  [
+   "s-018"
+  ],
+  [
+   "s-019"
+  ],
+  [
+   "s-020",
+   "s-023"
+  ],
+  [
+   "s-021",
+   "s-022"
+  ],
+  [
+   "s-024"
+  ],
+  [
+   "s-025"
+  ],
+  [
+   "s-027"
+  ]
+ ]
+}
