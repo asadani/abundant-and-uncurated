@@ -18,13 +18,14 @@
     --faint: #8a8a90;
     --rule: #d9d6cf;
     --paper: #ffffff;
-    --human: #2d3a8c;      /* human / curated */
-    --machine: #b9791a;    /* synthetic / generated */
+    --human: #8a642a;      /* human / curated */
+    --machine: #1c3a5e;    /* synthetic / generated */
     --mid: #6c6f76;
     --crimson: #9c2235;
-    --human-wash: #eef0f8;
-    --machine-wash: #f8f1e4;
+    --human-wash: #f7f1e2;
+    --machine-wash: #ecf0f6;
     --mid-wash: #f0efed;
+    --link: #1c3a5e;
   }
 
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -65,7 +66,7 @@
     margin: 0 0 8mm 0;
     letter-spacing: -0.01em;
   }
-  .cover h1 .em { color: var(--crimson); font-style: italic; }
+  .cover h1 .em { color: var(--human); font-style: italic; }
   .cover .sub {
     font-size: 15pt;
     color: var(--soft);
@@ -147,7 +148,7 @@
     margin-right: 2mm;
   }
   strong { font-weight: 700; }
-  a { color: var(--human); text-decoration: none; }
+  a { color: var(--link); text-decoration: none; }
 
   sup.cite {
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -263,7 +264,7 @@
   .refs { break-before: page; }
   .refs ol { font-size: 8.8pt; line-height: 1.45; color: var(--soft); padding-left: 8mm; }
   .refs li { margin-bottom: 1.8mm; }
-  .refs a { color: var(--human); word-break: break-all; }
+  .refs a { color: var(--link); word-break: break-all; }
   .refs .tier {
     font-family: "Helvetica Neue", Arial, sans-serif; font-size: 7.4pt;
     font-weight: 700; color: var(--faint); letter-spacing: 0.06em;
@@ -292,7 +293,7 @@
   .stratum .hd { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 11pt; }
   .stratum.hu .hd { color: var(--human); }
   .stratum.mi .hd { color: #54565c; }
-  .stratum.ma .hd { color: #9a6614; }
+  .stratum.ma .hd { color: #16304a; }
   .stratum .sub2 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8.2pt; color: var(--faint); margin-top: 0.6mm; }
   .chips { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 3mm; }
   .chip {
@@ -361,19 +362,19 @@
         </marker>
       </defs>
       <!-- closed loop -->
-      <circle cx="170" cy="95" r="62" fill="#f8f1e4" stroke="#b9791a" stroke-width="1.4"/>
-      <path d="M170,33 A62,62 0 1,1 108,95" fill="none" stroke="#b9791a" stroke-width="2" marker-end="url(#arw)"/>
-      <text x="170" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#9a6614">MODEL</text>
-      <text x="170" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#9a6614">LOOP</text>
+      <circle cx="170" cy="95" r="62" fill="#ecf0f6" stroke="#1c3a5e" stroke-width="1.4"/>
+      <path d="M170,33 A62,62 0 1,1 108,95" fill="none" stroke="#1c3a5e" stroke-width="2" marker-end="url(#arw)"/>
+      <text x="170" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">MODEL</text>
+      <text x="170" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">LOOP</text>
       <text x="170" y="176" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">converges on what it already knows</text>
 
       <!-- exogenous signal -->
       <line x1="420" y1="95" x2="245" y2="95" stroke="#9c2235" stroke-width="2" marker-end="url(#arw)"/>
       <text x="333" y="86" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">EXOGENOUS SIGNAL</text>
 
-      <rect x="430" y="52" width="180" height="86" rx="6" fill="#eef0f8" stroke="#2d3a8c" stroke-width="1.4"/>
-      <text x="520" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#2d3a8c">HUMAN</text>
-      <text x="520" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#2d3a8c">JUDGEMENT</text>
+      <rect x="430" y="52" width="180" height="86" rx="6" fill="#f7f1e2" stroke="#8a642a" stroke-width="1.4"/>
+      <text x="520" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">HUMAN</text>
+      <text x="520" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">JUDGEMENT</text>
       <text x="520" y="176" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">the only unbounded source</text>
     </svg>
   </div>
@@ -495,34 +496,34 @@
   <figure>
     <svg viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg">
       <text x="8" y="16" font-family="Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#9c2235">REPLACE</text>
-      <text x="8" y="118" font-family="Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#2d3a8c">ACCUMULATE</text>
+      <text x="8" y="118" font-family="Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#8a642a">ACCUMULATE</text>
       <!-- replace row -->
       <g>
-        <rect x="80" y="24" width="86" height="34" rx="3" fill="#eef0f8" stroke="#2d3a8c"/>
-        <text x="123" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#2d3a8c">real</text>
-        <rect x="200" y="24" width="86" height="34" rx="3" fill="#f8f1e4" stroke="#b9791a"/>
-        <text x="243" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#9a6614">synth 1</text>
-        <rect x="320" y="24" width="86" height="34" rx="3" fill="#f8f1e4" stroke="#b9791a"/>
-        <text x="363" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#9a6614">synth 2</text>
-        <rect x="440" y="24" width="86" height="34" rx="3" fill="#f8f1e4" stroke="#b9791a"/>
-        <text x="483" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#9a6614">synth 3</text>
+        <rect x="80" y="24" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
+        <text x="123" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
+        <rect x="200" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
+        <text x="243" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 1</text>
+        <rect x="320" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
+        <text x="363" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 2</text>
+        <rect x="440" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
+        <text x="483" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 3</text>
         <text x="560" y="45" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">error &uarr;</text>
         <text x="80" y="76" font-family="Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">proportion of real data hits zero after the first iteration</text>
       </g>
       <!-- accumulate row -->
       <g>
-        <rect x="80" y="126" width="86" height="34" rx="3" fill="#eef0f8" stroke="#2d3a8c"/>
-        <text x="123" y="147" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#2d3a8c">real</text>
-        <rect x="200" y="126" width="86" height="34" rx="3" fill="#eef0f8" stroke="#2d3a8c"/>
-        <text x="243" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#2d3a8c">real +</text>
-        <text x="243" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#9a6614">synth 1</text>
-        <rect x="320" y="126" width="86" height="34" rx="3" fill="#eef0f8" stroke="#2d3a8c"/>
-        <text x="363" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#2d3a8c">real +</text>
-        <text x="363" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#9a6614">synth 1&ndash;2</text>
-        <rect x="440" y="126" width="86" height="34" rx="3" fill="#eef0f8" stroke="#2d3a8c"/>
-        <text x="483" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#2d3a8c">real +</text>
-        <text x="483" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#9a6614">synth 1&ndash;3</text>
-        <text x="560" y="147" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#2d3a8c">bounded</text>
+        <rect x="80" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
+        <text x="123" y="147" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
+        <rect x="200" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
+        <text x="243" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="243" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1</text>
+        <rect x="320" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
+        <text x="363" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="363" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;2</text>
+        <rect x="440" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
+        <text x="483" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="483" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;3</text>
+        <text x="560" y="147" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#8a642a">bounded</text>
         <text x="80" y="178" font-family="Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">real data is diluted but never removed &mdash; collapse is avoided</text>
       </g>
     </svg>
@@ -594,22 +595,22 @@
   <figure>
     <svg viewBox="0 0 660 200" xmlns="http://www.w3.org/2000/svg">
       <!-- bounded -->
-      <circle cx="150" cy="100" r="70" fill="#f8f1e4" stroke="#b9791a" stroke-width="1.3" stroke-dasharray="4 3"/>
-      <circle cx="150" cy="100" r="34" fill="#fff" stroke="#b9791a" stroke-width="1.6"/>
-      <text x="150" y="97" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#9a6614">verifier&rsquo;s</text>
-      <text x="150" y="108" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#9a6614">knowledge</text>
-      <path d="M150,170 L150,140" stroke="#b9791a" stroke-width="1.6"/>
+      <circle cx="150" cy="100" r="70" fill="#ecf0f6" stroke="#1c3a5e" stroke-width="1.3" stroke-dasharray="4 3"/>
+      <circle cx="150" cy="100" r="34" fill="#fff" stroke="#1c3a5e" stroke-width="1.6"/>
+      <text x="150" y="97" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">verifier&rsquo;s</text>
+      <text x="150" y="108" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">knowledge</text>
+      <path d="M150,170 L150,140" stroke="#1c3a5e" stroke-width="1.6"/>
       <text x="150" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">model verifier &mdash; converges inward</text>
 
       <line x1="330" y1="40" x2="330" y2="170" stroke="#d9d6cf" stroke-width="1"/>
 
       <!-- unbounded -->
-      <circle cx="500" cy="100" r="34" fill="#fff" stroke="#2d3a8c" stroke-width="1.6"/>
-      <text x="500" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#2d3a8c">model</text>
-      <path d="M430,45 L470,80" stroke="#2d3a8c" stroke-width="1.4"/>
-      <path d="M570,45 L530,80" stroke="#2d3a8c" stroke-width="1.4"/>
-      <path d="M430,155 L470,120" stroke="#2d3a8c" stroke-width="1.4"/>
-      <path d="M570,155 L530,120" stroke="#2d3a8c" stroke-width="1.4"/>
+      <circle cx="500" cy="100" r="34" fill="#fff" stroke="#8a642a" stroke-width="1.6"/>
+      <text x="500" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#8a642a">model</text>
+      <path d="M430,45 L470,80" stroke="#8a642a" stroke-width="1.4"/>
+      <path d="M570,45 L530,80" stroke="#8a642a" stroke-width="1.4"/>
+      <path d="M430,155 L470,120" stroke="#8a642a" stroke-width="1.4"/>
+      <path d="M570,155 L530,120" stroke="#8a642a" stroke-width="1.4"/>
       <text x="500" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">human signal &mdash; arrives from outside</text>
     </svg>
     <figcaption><span class="fnum">Fig. 2</span> &mdash; A model verifier bounds the system at its own knowledge. Nothing inside the loop can exceed it.</figcaption>
@@ -1105,13 +1106,22 @@
   </ol>
 
   <hr class="rule">
-  <p class="small"><strong>On the essay&rsquo;s own limits.</strong> The full verification workspace
-  &mdash; source snapshots, the claims ledger with every quoted binding, the synthesis, and the
-  gate&rsquo;s verdict &mdash; sits alongside this document. Three of the seven conclusions are
+  <p class="small"><strong>On the essay&rsquo;s own limits.</strong> The verification workspace
+  &mdash; the claims ledger with every quoted binding, the source ledger with URLs and content
+  hashes, the synthesis, and the gate&rsquo;s verdict &mdash; is published alongside this essay.
+  The captured snapshots themselves are held back, being third-party copyrighted full text; the
+  hashes let anyone re-capture from the original URLs and confirm the match. Three of the seven conclusions are
   formally mixed-stance, meaning the underlying sources disagree; each is presented above with the
   disagreement rather than a chosen side. A claim-auditing pass using an independent reviewer that
   never sees the narrative was not run; load-bearing claims were audited by re-reading surrounding
   passages instead, which is a weaker check and is recorded as one.</p>
+
+  <p class="small">&copy; 2026 Anuj Sadani. This essay is licensed under
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> &mdash;
+  share it with credit, not commercially, and without redistributing modified versions.
+  Quoted passages from the works listed above remain the property of their publishers and
+  are reproduced here for citation and verification. Source ledgers and the typeset edition:
+  <a href="https://github.com/asadani/abundant-and-uncurated">github.com/asadani/abundant-and-uncurated</a>.</p>
 </section>
 
 </body>

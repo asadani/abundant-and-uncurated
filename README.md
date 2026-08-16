@@ -115,10 +115,19 @@ verify the hashes match.
 
 ## Licence
 
-The repository carries **CC0 1.0** (see [`LICENSE`](LICENSE)), which applies to the essay,
-the summary, and the research tooling output authored here.
+© 2026 Anuj Sadani. Licensed under
+**[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)** — see
+[`LICENSE`](LICENSE) for the full legal code.
 
-It does **not** — and cannot — apply to third-party material: the quoted passages recorded
+In short: **read it, quote it, share it — with credit, not for commercial use, and without
+redistributing modified versions.** That covers the essay, the summary, and the research
+workspace authored here.
+
+It does **not** — and cannot — apply to third-party material. The quoted passages recorded
 in `.research/claims.jsonl` are short excerpts from copyrighted works, reproduced for
-verification and citation. Rights in those remain with their publishers. Each is
+verification and citation. Rights in those remain with their publishers, and each is
 attributed in the essay's Notes & Sources with a tier label and a link to the original.
+
+Quoting the essay in commentary, criticism or scholarship is fair use and needs no
+permission from anyone. For anything else — translations, reprints, commercial use —
+[get in touch](https://github.com/asadani).
