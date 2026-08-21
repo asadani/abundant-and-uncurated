@@ -1,0 +1,97 @@
+# Abundant and Uncurated -- book-forge configuration.
+#
+# Flow mode: this is a single-flow essay, not a sheet-paginated book. It draws
+# its own cover and sets its own type, so book-forge supplies only the front
+# plate, the about-author page, and the scoped CSS those two need.
+
+slug: abundant-and-uncurated
+title: "Abundant and Uncurated"
+subtitle: "Why synthetic data scales human judgement, and why it cannot become its source"
+theme: sheet-oxblood        # only the QR settings are used in flow mode
+
+source:
+  template: book.html.in
+output:
+  html: abundant-and-uncurated.html
+  pdf: abundant-and-uncurated.pdf
+
+page:
+  size: A4
+
+cover:
+  art: assets/abundant-and-uncurated-cover.png
+  # The essay draws its own cover section, so no full-bleed cover page is
+  # generated. The art is kept here as the Ko-fi / shelf thumbnail; it is
+  # square (1:1), which `fit: crop` could not have handled anyway.
+  page: false
+  fit: matte
+
+qr:
+  - slot: QR_AUTHOR
+    target: https://anujsadani.in
+  - slot: QR_TECH
+    target: https://tech.anujsadani.in/
+
+folio:
+  # The manuscript already numbers its own pages via
+  # @page { @bottom-center { content: counter(page) } }, so stamping would
+  # print a second number beside the first.
+  enabled: false
+
+matter:
+  mode: flow
+  css: true
+  css_anchor: "</style>"
+  front:
+    heading: "Copyright, permissions, and how this was made"
+    work_line: "Abundant and Uncurated &mdash; a verified inquiry into whether
+      synthetic data can become the source of the judgement it scales."
+    # 45 claims bound to quoted sources, two of which failed the gate and are
+    # disclosed in the essay. The verified variant is accurate here.
+    ai_disclosure: verified
+    anchor_before: '<!-- BOOK-FORGE:AFTER-COVER -->'
+    imprint: "First edition &middot; August 2026"
+  about:
+    heading: "About the author"
+    anchor_before: '<!-- BOOK-FORGE:BEFORE-END -->'
+    qr_override:
+      # Presentation only -- the qr: list above is what the code encodes.
+      - index: 1
+        blurb: "Essays, the source ledgers, and the rest of the shelf."
+        code: "tech.anujsadani.in"
+  colophon_html: |
+    <b>Abundant and Uncurated</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
+      Repository, claim ledger, and verification workspace:
+      <b>github.com/asadani/abundant-and-uncurated</b><br>
+      Built on 45 claims bound to exact quotations; two failed verification and
+      are disclosed rather than dropped.<br>
+      Text licensed CC BY-NC-ND 4.0. Quoted passages remain the property of
+      their publishers and are reproduced for citation and verification.
+
+license:
+  id: CC-BY-NC-ND-4.0
+
+edition: "First edition"
+date: 2026-08
+
+links:
+  read_online: https://github.com/asadani/abundant-and-uncurated
+  repo: https://github.com/asadani/abundant-and-uncurated
+  kofi: https://ko-fi.com/s/000d383639
+
+verify:
+  cover_probes: ["Abundant"]
+  body_probes:
+    - "criteria drift"
+    - "model collapse"
+    - "exogenous"
+  matter_probes:
+    - "Copyright, permissions"
+    - "About the author"
+    - "CC BY-NC-ND 4.0"
+  # The essay declares no @font-face and no webfonts -- it uses a system serif
+  # stack by design, so Times/Palatino resolving here is expected, not a defect.
+  allow_system_fonts: true
+  min_images: 0          # the cover is inline SVG, not a raster image
+  expect_pages: 21       # pre-retrofit baseline; matter adds ~2
+  page_tolerance: 4
