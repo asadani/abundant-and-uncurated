@@ -2,8 +2,8 @@
 
 *Why synthetic data scales human judgement, and why it cannot become its source.*
 
-**Read the full essay:** [`abundant-and-uncurated.html`](abundant-and-uncurated.html) ·
-**Typeset PDF (21pp):** [ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639)
+**Read the full essay:** [tech.anujsadani.in/abundant-and-uncurated](https://tech.anujsadani.in/abundant-and-uncurated/) ·
+**Typeset PDF (24pp):** [ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639)
 
 ---
 
@@ -148,6 +148,6 @@ Two widely repeated claims **failed verification** and appear nowhere in the ess
   standard practice."* No source establishes it.
 
 The ledgers are in [`.research/`](.research/). Full source list with tier labels is in the
-[essay's Notes & Sources](abundant-and-uncurated.html).
+[essay's Notes & Sources](https://tech.anujsadani.in/abundant-and-uncurated/).
 
 **Superscripts** above refer to that numbered source list.

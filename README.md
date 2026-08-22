@@ -7,9 +7,11 @@
 <p align="center"><em>Why synthetic data scales human judgement — and why it cannot become its source.</em></p>
 
 <p align="center">
-  <a href="abundant-and-uncurated.html"><strong>Read the full essay (HTML)</strong></a> ·
-  <a href="SUMMARY.md">Summary</a> ·
-  <a href="https://ko-fi.com/s/000d383639">Typeset PDF, 21pp</a>
+  <strong><a href="https://tech.anujsadani.in/abundant-and-uncurated/">Read online</a></strong>
+  &nbsp;&middot;&nbsp;
+  <strong><a href="abundant-and-uncurated.pdf">Download the PDF</a></strong>
+  &nbsp;&middot;&nbsp;
+  <a href="SUMMARY.md">The argument in five minutes</a>
 </p>
 
 ---
@@ -42,15 +44,17 @@ learned with zero human data) is presented in Chapter III rather than managed aw
 
 | File | What it is |
 |---|---|
-| [`abundant-and-uncurated.html`](abundant-and-uncurated.html) | The full essay. Self-contained, screen + print stylesheets. |
+| [`abundant-and-uncurated.html`](https://tech.anujsadani.in/abundant-and-uncurated/) | The full essay. Self-contained, screen + print stylesheets. |
 | [`SUMMARY.md`](SUMMARY.md) | Condensed argument with the load-bearing numbers. |
 | [`data-in-the-ai-age.md`](data-in-the-ai-age.md) | The underlying paper, with `[^c-NNN]` claim markers and generated references. |
 | [`.research/`](.research/) | The verification workspace — brief, source ledger, claims ledger, synthesis, gate report. |
+| [`abundant-and-uncurated.pdf`](abundant-and-uncurated.pdf) | The typeset print edition, 24pp. |
 | `Abundant_and_Uncurated_cover.png` | Cover art. |
 
-The **typeset 21-page PDF** is available at
-[ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639). The HTML here is the complete
-text — the PDF is the print-set artifact.
+The **typeset 24-page PDF** is committed here as
+[`abundant-and-uncurated.pdf`](abundant-and-uncurated.pdf), and is also on
+[ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639). The HTML is the complete text —
+the PDF is the print-set artifact.
 
 ## How this was built
 
