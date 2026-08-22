@@ -8,3 +8,6 @@ Thumbs.db
 # Provenance survives in .research/sources.jsonl (URL + hash) and the exact
 # quoted substrings survive in .research/claims.jsonl.
 .research/snapshots/
+
+# The typeset PDF is sold on Ko-fi, not distributed from this repository.
+*.pdf

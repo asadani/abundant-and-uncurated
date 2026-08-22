@@ -9,7 +9,7 @@
 <p align="center">
   <strong><a href="https://tech.anujsadani.in/abundant-and-uncurated/">Read online</a></strong>
   &nbsp;&middot;&nbsp;
-  <strong><a href="abundant-and-uncurated.pdf">Download the PDF</a></strong>
+  <strong><a href="https://ko-fi.com/s/000d383639">Get the PDF on Ko-fi</a></strong>
   &nbsp;&middot;&nbsp;
   <a href="SUMMARY.md">The argument in five minutes</a>
 </p>
@@ -48,13 +48,12 @@ learned with zero human data) is presented in Chapter III rather than managed aw
 | [`SUMMARY.md`](SUMMARY.md) | Condensed argument with the load-bearing numbers. |
 | [`data-in-the-ai-age.md`](data-in-the-ai-age.md) | The underlying paper, with `[^c-NNN]` claim markers and generated references. |
 | [`.research/`](.research/) | The verification workspace — brief, source ledger, claims ledger, synthesis, gate report. |
-| [`abundant-and-uncurated.pdf`](abundant-and-uncurated.pdf) | The typeset print edition, 24pp. |
+| Typeset PDF | The typeset print edition, 24pp. Sold on [Ko-fi](https://ko-fi.com/s/000d383639); not in this repository. |
 | `Abundant_and_Uncurated_cover.png` | Cover art. |
 
-The **typeset 24-page PDF** is committed here as
-[`abundant-and-uncurated.pdf`](abundant-and-uncurated.pdf), and is also on
-[ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639). The HTML is the complete text —
-the PDF is the print-set artifact.
+The **typeset 24-page PDF** is sold on
+[ko-fi.com/s/000d383639](https://ko-fi.com/s/000d383639) and is not kept in this
+repository. The HTML here is the complete text — the PDF is the print-set artifact.
 
 ## How this was built
 
