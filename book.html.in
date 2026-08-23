@@ -514,6 +514,28 @@
 .bf-matter .colophon b { color: var(--bf-soft); }
 /* /BOOK-FORGE:MATTER-CSS */
 
+
+  /* ---------- the Ko-fi button ---------- */
+  .cover-dl{
+    display:inline-block;
+    /* .cover is a flex column, so a child stretches edge to edge unless it
+       opts out; align-self keeps the pill the width of its own label. */
+    align-self:flex-start;
+    margin-top:26px;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:#fff;
+    background:var(--crimson);
+    padding:11px 20px;
+    border-radius:24px;
+    text-decoration:none;
+  }
+  .cover-dl .ar{ font-weight:400;opacity:0.85; }
+  .cover-dl:hover{ background:#7d1b2b; }
+  /* a screen affordance; in print the reader already has the PDF */
+  @media print{ .cover-dl{ display:none; } }
 </style>
 </head>
 <body>
@@ -562,6 +584,7 @@
     <strong>2</strong> rejected in verification and reported as such &middot;
     <strong>22</strong> distinct works &middot; <strong>57</strong> quoted bindings, zero mismatches.
   </div>
+  <a class="cover-dl" href="https://ko-fi.com/s/000d383639" target="_blank" rel="noopener"><span class="ar">&nearr;</span>&nbsp; Get the full PDF on Ko-fi</a>
 </section>
 
 <!-- ============================ OVERTURE ============================ -->
