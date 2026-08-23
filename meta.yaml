@@ -12,7 +12,8 @@ theme: sheet-oxblood        # only the QR settings are used in flow mode
 source:
   template: book.html.in
 output:
-  html: abundant-and-uncurated.html
+  # index.html so the repo's own Pages site serves the directory URL
+  html: index.html
   pdf: abundant-and-uncurated.pdf
 
 page:
