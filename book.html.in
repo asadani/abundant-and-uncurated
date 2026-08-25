@@ -534,6 +534,20 @@
   }
   .cover-dl .ar{ font-weight:400;opacity:0.85; }
   .cover-dl:hover{ background:#7d1b2b; }
+/* Entry links: screen-only, like the Ko-fi pill. A print reader is already
+   holding the long version, so an offer to read the short one is noise. */
+.entry-links{ margin:7mm 0 0 }
+.entry-summary{
+  font-family:var(--mono);
+  font-size:8.2pt;
+  letter-spacing:.02em;
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-bottom:1px;
+}
+.entry-summary:hover{ border-bottom-color:var(--accent) }
+@media print{ .entry-links{ display:none } }
   /* a screen affordance; in print the reader already has the PDF */
   @media print{ .cover-dl{ display:none; } }
 </style>
@@ -584,6 +598,9 @@
     <strong>2</strong> rejected in verification and reported as such &middot;
     <strong>22</strong> distinct works &middot; <strong>57</strong> quoted bindings, zero mismatches.
   </div>
+  <p class="entry-links">
+    <a class="entry-summary" href="summary/">Short on time? Read the condensed argument &mdash; 5 min</a>
+  </p>
   <a class="cover-dl" href="https://ko-fi.com/s/000d383639" target="_blank" rel="noopener"><span class="ar">&nearr;</span>&nbsp; Get the full PDF on Ko-fi</a>
 </section>
 
