@@ -92,7 +92,6 @@ verify:
     - "CC BY-NC-ND 4.0"
   # The essay declares no @font-face and no webfonts -- it uses a system serif
   # stack by design, so Times/Palatino resolving here is expected, not a defect.
-  allow_system_fonts: true
   min_images: 0          # the cover is inline SVG, not a raster image
   expect_pages: 24       # pre-retrofit baseline; matter adds ~2
   page_tolerance: 4

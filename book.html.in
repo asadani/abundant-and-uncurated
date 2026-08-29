@@ -4,15 +4,31 @@
 <meta charset="utf-8">
 <title>Abundant and Uncurated</title>
 <style>
+{{FONT_FACES}}
+
   /* ---------- Page ---------- */
   @page {
     size: A4;
     margin: 22mm 20mm 20mm 20mm;
-    @bottom-center { content: counter(page); }
+    @bottom-center {
+      content: counter(page);
+      /* Margin boxes do not inherit from <body>; without this the
+         folio falls back to the initial serif (Times). */
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 9pt;
+    }
   }
   @page :first { margin: 0; }
 
   :root {
+    /* The embedded faces come first; the names after them are the stacks
+       this book already fell back to, kept in order. Without the webfonts
+       the PDF rendered in whatever the build machine had -- Times/Arial
+       here, Liberation/DejaVu on Linux -- so the artifact differed by
+       machine. */
+    --body: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", "Palatino", Georgia, "Times New Roman", serif;
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
     --ink: #1b1b1d;
     --soft: #4a4a4f;
     --faint: #8a8a90;
@@ -31,7 +47,7 @@
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   body {
-    font-family: "Iowan Old Style", "Palatino Linotype", "Palatino", Georgia, "Times New Roman", serif;
+    font-family: var(--body);
     color: var(--ink);
     background: var(--paper);
     font-size: 11.2pt;
@@ -51,7 +67,7 @@
     position: relative;
   }
   .cover .kicker {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     letter-spacing: 0.32em;
     text-transform: uppercase;
     font-size: 9.5pt;
@@ -76,7 +92,7 @@
   }
   .cover .byline {
     margin-top: 8mm;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 11.5pt;
     color: var(--ink);
     font-weight: 600;
@@ -94,7 +110,7 @@
   }
   .cover .meta {
     margin-top: auto;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 9.5pt;
     color: var(--faint);
     letter-spacing: 0.04em;
@@ -106,7 +122,7 @@
 
   /* ---------- Typography ---------- */
   h2.part {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 10pt;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -123,16 +139,16 @@
   }
   .chapter { break-before: page; }
   .chapter-num {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 60pt;
-    font-weight: 800;
+    font-weight: 700;
     color: #eceae3;
     line-height: 0.8;
     margin: 0 0 -6mm 0;
     letter-spacing: -0.04em;
   }
   h3 {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 12.5pt;
     font-weight: 700;
     color: var(--ink);
@@ -151,7 +167,7 @@
   a { color: var(--link); text-decoration: none; }
 
   sup.cite {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 7pt;
     color: var(--crimson);
     font-weight: 700;
@@ -175,7 +191,7 @@
     margin-top: 3mm;
     font-size: 9.5pt;
     font-style: normal;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     letter-spacing: 0.04em;
     color: var(--faint);
     text-transform: uppercase;
@@ -194,7 +210,7 @@
   figure { margin: 8mm 0; break-inside: avoid; text-align: center; }
   figure svg { max-width: 100%; height: auto; }
   figcaption {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
     font-size: 8.6pt;
     color: var(--faint);
     margin-top: 3mm;
@@ -206,7 +222,7 @@
   table {
     width: 100%; border-collapse: collapse; font-size: 9.4pt;
     margin: 6mm 0; break-inside: avoid;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--display);
   }
   th {
     text-align: left; background: #2b2b2e; color: #fff;
@@ -223,18 +239,18 @@
     border-radius: 2mm; padding: 5mm 6mm; margin: 7mm 0; break-inside: avoid;
   }
   .data h4 {
-    font-family: "Helvetica Neue", Arial, sans-serif; margin: 0 0 3mm 0;
+    font-family: var(--display); margin: 0 0 3mm 0;
     font-size: 8.6pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson);
   }
   .data .row { display: flex; gap: 6mm; flex-wrap: wrap; }
   .data .stat { flex: 1 1 38mm; }
   .data .big {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 19pt;
-    font-weight: 800; color: var(--ink); line-height: 1.08;
+    font-family: var(--display); font-size: 19pt;
+    font-weight: 700; color: var(--ink); line-height: 1.08;
   }
   .data .nb { white-space: nowrap; }
   .data .lbl {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8pt;
+    font-family: var(--display); font-size: 8pt;
     color: var(--soft); margin-top: 1.5mm; line-height: 1.3;
   }
 
@@ -243,7 +259,7 @@
   .overture .script { font-size: 12.4pt; line-height: 1.66; }
   .overture .script p { margin-bottom: 4.6mm; }
   .beat {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8pt;
+    font-family: var(--display); font-size: 8pt;
     letter-spacing: 0.22em; text-transform: uppercase; color: var(--crimson);
     font-weight: 700; margin: 8mm 0 2mm 0;
   }
@@ -254,7 +270,7 @@
   .toc li {
     display: flex; align-items: baseline; padding: 2.6mm 0;
     border-bottom: 1px solid #eceae3;
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10.5pt;
+    font-family: var(--display); font-size: 10.5pt;
   }
   .toc .n { color: var(--crimson); font-weight: 700; width: 14mm; }
   .toc .t { color: var(--ink); font-weight: 600; }
@@ -266,7 +282,7 @@
   .refs li { margin-bottom: 1.8mm; }
   .refs a { color: var(--link); word-break: break-all; }
   .refs .tier {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 7.4pt;
+    font-family: var(--display); font-size: 7.4pt;
     font-weight: 700; color: var(--faint); letter-spacing: 0.06em;
   }
 
@@ -280,7 +296,7 @@
     padding: 4mm 4.5mm; background: #fcfbf8; break-inside: avoid;
   }
   .card .role {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8pt;
+    font-family: var(--display); font-size: 8pt;
     letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;
     color: var(--crimson); margin-bottom: 1.8mm;
   }
@@ -290,14 +306,14 @@
   .stratum.hu { background: var(--human-wash); border: 1px solid var(--human); }
   .stratum.mi { background: var(--mid-wash); border: 1px solid var(--mid); }
   .stratum.ma { background: var(--machine-wash); border: 1px solid var(--machine); }
-  .stratum .hd { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 11pt; }
+  .stratum .hd { font-family: var(--display); font-weight: 700; font-size: 11pt; }
   .stratum.hu .hd { color: var(--human); }
   .stratum.mi .hd { color: #54565c; }
   .stratum.ma .hd { color: #16304a; }
-  .stratum .sub2 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8.2pt; color: var(--faint); margin-top: 0.6mm; }
+  .stratum .sub2 { font-family: var(--display); font-size: 8.2pt; color: var(--faint); margin-top: 0.6mm; }
   .chips { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 3mm; }
   .chip {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8.3pt;
+    font-family: var(--display); font-size: 8.3pt;
     background: #fff; border: 1px solid var(--rule); border-radius: 12mm;
     padding: 1.3mm 3mm; color: var(--soft);
   }
@@ -307,7 +323,7 @@
   .twocol .keep { background: var(--human-wash); }
   .twocol .give { background: var(--machine-wash); }
   .twocol h5 {
-    font-family: "Helvetica Neue", Arial, sans-serif; margin: 0 0 2.5mm;
+    font-family: var(--display); margin: 0 0 2.5mm;
     font-size: 9pt; letter-spacing: 0.12em; text-transform: uppercase;
   }
   .twocol .keep h5 { color: var(--human); }
@@ -321,7 +337,7 @@
     background: #fdf7f8; padding: 5mm 6mm; margin: 7mm 0; break-inside: avoid;
   }
   .ledger h4 {
-    font-family: "Helvetica Neue", Arial, sans-serif; margin: 0 0 3mm 0;
+    font-family: var(--display); margin: 0 0 3mm 0;
     font-size: 8.6pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson);
   }
   .ledger p { font-size: 9.6pt; line-height: 1.5; color: var(--soft); margin-bottom: 2mm; }
@@ -338,7 +354,7 @@
     section.cover { height: auto; min-height: 0; padding: 76px 72px; }
     section.cover .meta { margin-top: 64px; }
   }
-/* BOOK-FORGE:MATTER-CSS v1 sha=54d2d29db345 */
+/* BOOK-FORGE:MATTER-CSS v1 sha=c9624f4344d7 */
 /* book-forge matter -- flow mode.
  *
  * Injected into essays that were never built as books. Each has its own
@@ -497,6 +513,11 @@
   color: var(--bf-soft);
 }
 .bf-matter .qrcard .what code {
+  /* Without this, <code> falls to the browser's default mono -- Consolas on
+     Windows, DejaVu on Linux -- so the same book rendered a different face
+     depending on the machine that built it. Books that happen to define their
+     own .qrcard code rule were fine; the ones that did not, were not. */
+  font-family: var(--mono, var(--bf-mono, ui-monospace, monospace));
   font-size: 0.78rem;
   color: var(--bf-accent);
   background: none;
@@ -512,6 +533,36 @@
   color: var(--bf-faint);
 }
 .bf-matter .colophon b { color: var(--bf-soft); }
+
+/* --- screen reading order -------------------------------------------------
+ *
+ * On paper the order is right: cover, title page, copyright, the argument,
+ * about. On a screen it is a wall -- a reader meets a full-bleed cover, a
+ * title page, a copyright notice and an AI-disclosure note before one
+ * sentence of the argument, which on a 30-page essay is four screens of
+ * scrolling to find out whether it is worth reading.
+ *
+ * So screen only: drop the cover image, and send the copyright/disclosure
+ * block to the end where a reader who wants it can still find it. @media
+ * print is untouched, so the PDF keeps the print order exactly.
+ *
+ * body becomes a flex column because `order` needs a flex container. That
+ * stops margins collapsing BETWEEN top-level sections -- which is why the
+ * sections themselves are given a single margin direction below rather than
+ * relying on collapse.
+ */
+@media screen {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body > section.cover,
+  body > section.sheet.cover { display: none; }
+
+  body > section { order: 0; }
+  body > .bf-front { order: 8; }
+  body > .bf-about { order: 9; }
+}
 /* /BOOK-FORGE:MATTER-CSS */
 
 
@@ -522,7 +573,7 @@
        opts out; align-self keeps the pill the width of its own label. */
     align-self:flex-start;
     margin-top:26px;
-    font-family:"Helvetica Neue", Arial, sans-serif;
+    font-family:var(--display);
     font-size:13px;
     font-weight:600;
     letter-spacing:0.02em;
@@ -612,18 +663,18 @@
       <!-- closed loop -->
       <circle cx="170" cy="95" r="62" fill="#ecf0f6" stroke="#1c3a5e" stroke-width="1.4"/>
       <path d="M170,33 A62,62 0 1,1 108,95" fill="none" stroke="#1c3a5e" stroke-width="2" marker-end="url(#arw)"/>
-      <text x="170" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">MODEL</text>
-      <text x="170" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">LOOP</text>
-      <text x="170" y="176" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">converges on what it already knows</text>
+      <text x="170" y="90" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">MODEL</text>
+      <text x="170" y="106" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#16304a">LOOP</text>
+      <text x="170" y="176" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a8a90">converges on what it already knows</text>
 
       <!-- exogenous signal -->
       <line x1="420" y1="95" x2="245" y2="95" stroke="#9c2235" stroke-width="2" marker-end="url(#arw)"/>
-      <text x="333" y="86" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">EXOGENOUS SIGNAL</text>
+      <text x="333" y="86" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">EXOGENOUS SIGNAL</text>
 
       <rect x="430" y="52" width="180" height="86" rx="6" fill="#f7f1e2" stroke="#8a642a" stroke-width="1.4"/>
-      <text x="520" y="90" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">HUMAN</text>
-      <text x="520" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">JUDGEMENT</text>
-      <text x="520" y="176" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">the only unbounded source</text>
+      <text x="520" y="90" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">HUMAN</text>
+      <text x="520" y="106" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="12" font-weight="700" fill="#8a642a">JUDGEMENT</text>
+      <text x="520" y="176" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a8a90">the only unbounded source</text>
     </svg>
   </div>
 
@@ -802,36 +853,36 @@
 
   <figure>
     <svg viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg">
-      <text x="8" y="16" font-family="Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#9c2235">REPLACE</text>
-      <text x="8" y="118" font-family="Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#8a642a">ACCUMULATE</text>
+      <text x="8" y="16" font-family="Archivo,Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#9c2235">REPLACE</text>
+      <text x="8" y="118" font-family="Archivo,Helvetica Neue,Arial" font-size="9.5" font-weight="700" fill="#8a642a">ACCUMULATE</text>
       <!-- replace row -->
       <g>
         <rect x="80" y="24" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
-        <text x="123" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
+        <text x="123" y="45" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
         <rect x="200" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
-        <text x="243" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 1</text>
+        <text x="243" y="45" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 1</text>
         <rect x="320" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
-        <text x="363" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 2</text>
+        <text x="363" y="45" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 2</text>
         <rect x="440" y="24" width="86" height="34" rx="3" fill="#ecf0f6" stroke="#1c3a5e"/>
-        <text x="483" y="45" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 3</text>
-        <text x="560" y="45" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">error &uarr;</text>
-        <text x="80" y="76" font-family="Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">proportion of real data hits zero after the first iteration</text>
+        <text x="483" y="45" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#16304a">synth 3</text>
+        <text x="560" y="45" font-family="Archivo,Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#9c2235">error &uarr;</text>
+        <text x="80" y="76" font-family="Archivo,Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">proportion of real data hits zero after the first iteration</text>
       </g>
       <!-- accumulate row -->
       <g>
         <rect x="80" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
-        <text x="123" y="147" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
+        <text x="123" y="147" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a642a">real</text>
         <rect x="200" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
-        <text x="243" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
-        <text x="243" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1</text>
+        <text x="243" y="141" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="243" y="153" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1</text>
         <rect x="320" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
-        <text x="363" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
-        <text x="363" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;2</text>
+        <text x="363" y="141" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="363" y="153" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;2</text>
         <rect x="440" y="126" width="86" height="34" rx="3" fill="#f7f1e2" stroke="#8a642a"/>
-        <text x="483" y="141" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
-        <text x="483" y="153" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;3</text>
-        <text x="560" y="147" font-family="Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#8a642a">bounded</text>
-        <text x="80" y="178" font-family="Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">real data is diluted but never removed &mdash; collapse is avoided</text>
+        <text x="483" y="141" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#8a642a">real +</text>
+        <text x="483" y="153" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8" fill="#16304a">synth 1&ndash;3</text>
+        <text x="560" y="147" font-family="Archivo,Helvetica Neue,Arial" font-size="9" font-weight="700" fill="#8a642a">bounded</text>
+        <text x="80" y="178" font-family="Archivo,Helvetica Neue,Arial" font-size="8.4" fill="#8a8a90">real data is diluted but never removed &mdash; collapse is avoided</text>
       </g>
     </svg>
     <figcaption><span class="fnum">Fig. 1</span> &mdash; The two regimes. Only one of them describes a real training pipeline.</figcaption>
@@ -904,21 +955,21 @@
       <!-- bounded -->
       <circle cx="150" cy="100" r="70" fill="#ecf0f6" stroke="#1c3a5e" stroke-width="1.3" stroke-dasharray="4 3"/>
       <circle cx="150" cy="100" r="34" fill="#fff" stroke="#1c3a5e" stroke-width="1.6"/>
-      <text x="150" y="97" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">verifier&rsquo;s</text>
-      <text x="150" y="108" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">knowledge</text>
+      <text x="150" y="97" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">verifier&rsquo;s</text>
+      <text x="150" y="108" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#16304a">knowledge</text>
       <path d="M150,170 L150,140" stroke="#1c3a5e" stroke-width="1.6"/>
-      <text x="150" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">model verifier &mdash; converges inward</text>
+      <text x="150" y="190" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a8a90">model verifier &mdash; converges inward</text>
 
       <line x1="330" y1="40" x2="330" y2="170" stroke="#d9d6cf" stroke-width="1"/>
 
       <!-- unbounded -->
       <circle cx="500" cy="100" r="34" fill="#fff" stroke="#8a642a" stroke-width="1.6"/>
-      <text x="500" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#8a642a">model</text>
+      <text x="500" y="103" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="8.6" font-weight="700" fill="#8a642a">model</text>
       <path d="M430,45 L470,80" stroke="#8a642a" stroke-width="1.4"/>
       <path d="M570,45 L530,80" stroke="#8a642a" stroke-width="1.4"/>
       <path d="M430,155 L470,120" stroke="#8a642a" stroke-width="1.4"/>
       <path d="M570,155 L530,120" stroke="#8a642a" stroke-width="1.4"/>
-      <text x="500" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial" font-size="9" fill="#8a8a90">human signal &mdash; arrives from outside</text>
+      <text x="500" y="190" text-anchor="middle" font-family="Archivo,Helvetica Neue,Arial" font-size="9" fill="#8a8a90">human signal &mdash; arrives from outside</text>
     </svg>
     <figcaption><span class="fnum">Fig. 2</span> &mdash; A model verifier bounds the system at its own knowledge. Nothing inside the loop can exceed it.</figcaption>
   </figure>
