@@ -1,0 +1,27 @@
+Where Synthetic Earns Its Place.
+
+None of this makes synthetic data a mistake. It makes it a tool with conditions, and the conditions are more interesting than the tool. Synthetic data improves models conditionally rather than generally, and the binding condition is the strength of the verification applied to it, not the volume generated.
+
+Filtering is not automatically virtuous
+
+The practitioner consensus holds that a judge filter is the critical step, and that an unfiltered synthetic dataset is worse than a smaller filtered one. Half of that is supported. Filtering enhances learning only when the underlying verification is strong enough to supply a high-resolution correctness signal.
+
+The corollary is routinely omitted, and it is the useful half: naive or rigid verification filtering has been observed to produce no improvement at all. Weak filtering is theatre. And over-strict filtering is actively harmful, because it strips out the diversity that measurably correlates with both pre-training and supervised fine-tuning performance.
+
+There is a related finding that looks like good news and is really a relocation of the problem. The quality of the seed data fed to a generator matters more to downstream performance than whether the generated knowledge is novel. Which is to say: synthetic data inherits its quality from curated data. The curation did not disappear. It moved upstream, where it is easier not to look at.
+
+One place synthetic genuinely holds up
+
+Synthetic test data has been found as effective as hand-crafted data both for refining evaluation criteria and for aligning with user expectations. This is a real result and it deserves stating precisely, because it is routinely over-read. It concerns the refinement of judge criteria, not the quality of training data, and it rests on a preprint with twenty-four participants.
+
+The companion figure gets quoted more often than the finding: eighty-three per cent of those participants preferred the synthetic-generation tool to creating or selecting test cases by hand. That measures perceived workload and tool preference. It is evidence that people would rather not hand-write test cases, a genuine finding about the economics of curation effort, and not evidence that synthetic data is good.
+
+Now the part that should worry me. One system, trained by self-play with no human-curated data whatsoever, outperformed models trained on expert-curated human data in the coding category. It is a spotlight result at a top venue. If a model can bootstrap state-of-the-art reasoning from nothing, the thesis of this essay is in serious trouble.
+
+Three considerations bound it. None of them dismisses it.
+
+0.3 absolute percentage points, on one category. A near-tie, not a rout, and the abstract-level framing obscures this completely.
+
+It works because a code executor supplies validation and verifiable feedback. Free ground truth exists for code and mathematics. It does not exist for tone, safety or appropriateness.
+
+A domain with no formal correctness oracle, where self-generated data improves a model across many generations with no human signal at any point. That experiment has not been run.

@@ -1,0 +1,13 @@
+The Verifier’s Knowledge Centre.
+
+Underneath the argument about regimes sits a mechanism that generalises better than either result, and it is the load-bearing wall of this essay. It also very nearly went unnoticed, for reasons worth admitting.
+
+Continual improvement requires that data be curated in a way that injects signal exogenous to the system that produced the original data. Without such curation, performance can plateau or collapse after many iterations.
+
+Read that carefully. It specifies exogenous signal. It does not specify human signal. And at first pass, the distinction appears to dissolve the case for the human entirely: a verifier "whether a human or a better model" is sufficient to prevent collapse. On that reading, a stronger model substitutes cleanly for a person, and the whole hand-wringing about human data is a transitional worry.
+
+It does not substitute, and the qualification is decisive. Where a model rather than a human supplies the verification, early gains plateau and may reverse unless that verifier is perfectly reliable. More fundamentally, verifier-guided retraining ultimately drives the parameter estimate toward the verifier's own knowledge centre.
+
+That is the whole argument in one clause. A model verifier does not add information to the system. It transfers information the verifier already holds, and then the process terminates. You can distil a stronger model into a weaker one indefinitely and never exceed the stronger one. The ceiling is not a training problem. It is an information-theoretic one.
+
+A system that learns only from itself is not learning. It is settling.

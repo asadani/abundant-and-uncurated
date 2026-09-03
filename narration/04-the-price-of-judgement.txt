@@ -1,0 +1,25 @@
+The Price of Judgement.
+
+Human curation is costly for structural reasons rather than temporary ones. This matters because the two diagnoses lead to opposite strategies. If curation is expensive because tooling is immature, you wait. If it is expensive because of what it fundamentally is, you budget for it permanently.
+
+The shape of the cost
+
+Volume is the least interesting half
+
+The scale is genuinely large. One frontier alignment pipeline collected human preference data on a weekly basis, comprising over one million binary model-generation comparisons. That is not a dataset assembled once and amortised. It is a standing operation with a payroll.
+
+But volume is the part that tooling can attack, and focusing on it is what makes people predict that curation costs are about to fall. Two other findings explain why they do not.
+
+Failure is invisible until late
+
+Data cascades, compounding downstream failures originating in data problems, are opaque and delayed, with poor indicators and metrics for detecting them. Ninety-two per cent of the practitioners surveyed reported experiencing at least one.
+
+This is the load-bearing explanation for why curation resists automation, and it is a chicken-and-egg problem rather than an engineering gap. Automated quality control needs a quality signal to optimise against. A process whose defects surface only far downstream does not emit one at the time the work is being done. You cannot cheaply automate against a signal that does not yet exist.
+
+Curation is normative, not clerical
+
+The second reason is less discussed and more fundamental. Annotation instruction documents reproduce and normalise the worldviews of the parties commissioning the data. Curation is not transcription that a cheaper worker could perform equally well. It encodes a position on what the right answer is.
+
+This is why quality standards are expensive to write and contested to apply. It also explains something the industry prefers not to name: the cost has largely been displaced rather than removed. Data workers producing training data are paid as little as a few cents per task and typically lack the social protections attached to employment. The field's own account of itself is that data is the most under-valued and de-glamorised aspect of AI practice.
+
+Curation looks like a clerical cost because we have arranged for someone else, somewhere else, to absorb it. On the economics of not looking

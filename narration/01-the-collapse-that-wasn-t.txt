@@ -1,0 +1,19 @@
+The Collapse That Wasn’t.
+
+In July 2024, Nature published a result that gave the field a nightmare with a name. Indiscriminately training generative models on data produced by other models causes model collapse: the models progressively forget the true underlying data distribution, even when that distribution is not itself changing. The characteristic symptom is elegant and grim, the tails of the original content distribution disappear. The rare things go first.
+
+The finding travelled fast, and it travelled stripped of its conditions. It became a general claim about synthetic data, which is not what the paper demonstrates.
+
+Later work qualified the result heavily. When each generation's real data is replaced by synthetic data, test error does rise with every model-fitting iteration. But when synthetic data accumulates alongside the original real data, collapse is avoided. Same phenomenon, opposite outcome, and the only difference is what happens to the old data.
+
+A position paper pushes the criticism further on two fronts. First, the literature is arguing about eight different definitions of degradation rather than one. Second, and more damagingly, the replace paradigm drives the proportion of real data to zero immediately after the first iteration, a condition that describes no training pipeline anyone actually operates.
+
+A tier inversion worth noticing
+
+These are not contradictory findings. They are findings about different setups, and the later work simply ran an arm the earlier work did not. But something about how they are shelved deserves comment, because it will mislead a careful reader who is being careful in the usual way.
+
+The peer-reviewed paper carries the less qualified claim. The preprints carry the more careful one. A reader who weights sources by venue, the ordinary, sensible heuristic, gets this backwards. In a field moving this fast, recency can outrank review status, and citing only the peer-reviewed framing produces a more alarming account than the literature supports.
+
+One housekeeping note, because a heavily cited paper carrying a correction invites suspicion. The Nature paper does carry a 2025 Author Correction, amending text in its Theoretical intuition section. It is a symbol substitution. It is not a retraction and it does not disturb the findings.
+
+Model collapse is real. It is also a description of a laboratory condition that nobody trains in.

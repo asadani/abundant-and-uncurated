@@ -1,0 +1,51 @@
+Notes & Sources.
+
+Twenty-two works. Tier labels follow an academic source standard: T2 peer-reviewed primary studies and proceedings; T3 preprints, conference papers and lab technical reports, which is where the frontier of this particular literature lives. All sources were captured to disk and accessed 2026-08-16. Citation numbers in the text map to this list.
+
+Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y., AI models collapse when trained on recursively generated data. Nature, 24 Jul 2024. nature.com
+
+Shumailov, I., et al., Author Correction: AI models collapse when trained on recursively generated data. Nature 640, E6, 21 Mar 2025. nature.com
+
+Gerstgrasser, M., Schaeffer, R., Dey, A., Rafailov, R., et al., Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data. arXiv:2404.01413, Apr 2024. arxiv.org
+
+Schaeffer, R., et al., Position: Model Collapse Does Not Mean What You Think. arXiv:2503.03150, Mar 2025. arxiv.org
+
+Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M., Position: Will we run out of data? Limits of LLM scaling based on human-generated data. ICML 2024 / arXiv:2211.04325. proceedings.mlr.press
+
+Epoch AI, Will we run out of data to train large language models? Jun 2024. epoch.ai
+
+Zheng, L., Chiang, W.-L., Sheng, Y., et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets & Benchmarks. arxiv.org
+
+Shankar, S., Zamfirescu-Pereira, J.D., Hartmann, B., Parameswaran, A.G., & Arawjo, I., Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences. ACM UIST 2024 / arXiv:2404.12272. arxiv.org
+
+Generate, Evaluate, Iterate: Synthetic Data for Human-in-the-Loop Refinement of LLM Judges. arXiv:2511.04478, Nov 2025. arxiv.org
+
+Verification Limits Code LLM Training. arXiv:2509.20837, Sep 2025. arxiv.org
+
+Escaping Collapse: The Strength of Weak Data for Large Language Model Training. arXiv:2502.08924, Feb 2025. arxiv.org
+
+Lee, H., Phatale, S., Mansoor, H., et al., RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback. arXiv:2309.00267. arxiv.org
+
+Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P., & Aroyo, L., "Everyone wants to do the model work, not the data work": Data Cascades in High-Stakes AI. ACM CHI 2021. dl.acm.org
+
+BeyondWeb: Lessons from Scaling Synthetic Data for Trillion-scale Pretraining. arXiv:2508.10975, Aug 2025. arxiv.org
+
+Longpre, S., et al. (Data Provenance Initiative, MIT), Consent in Crisis: The Rapid Decline of the AI Data Commons. NeurIPS 2024 D&B / arXiv:2407.14933. arxiv.org
+
+Escaping Model Collapse via Synthetic Data Verification: Near-term Improvements and Long-term Convergence. arXiv:2510.16657, Oct 2025. arxiv.org
+
+Zhao, A., et al. (LeapLab, Tsinghua), Absolute Zero: Reinforced Self-play Reasoning with Zero Data. NeurIPS 2025 spotlight / arXiv:2505.03335. arxiv.org
+
+Miceli, M., & Posada, J., The Data-Production Dispositif. Proc. ACM Human-Computer Interaction, CSCW 2022 / arXiv:2205.11963. arxiv.org
+
+Touvron, H., et al. (Meta AI), Llama 2: Open Foundation and Fine-Tuned Chat Models. arXiv:2307.09288, Jul 2023. arxiv.org
+
+Long, L., Wang, R., Liu, R., et al., On LLMs-Driven Synthetic Data Generation, Curation, and Evaluation: A Survey. arXiv:2406.15126, Jun 2024. arxiv.org
+
+On the Diversity of Synthetic Data and its Impact on Training Large Language Models. arXiv:2410.15226, Oct 2024. arxiv.org
+
+Gilardi, F., Alizadeh, M., & Kubli, M., ChatGPT outperforms crowd workers for text-annotation tasks. PNAS 120(30), 2023 / arXiv:2303.15056. arxiv.org
+
+On the essay's own limits. The verification workspace, the claims ledger with every quoted binding, the source ledger with URLs and content hashes, the synthesis, and the gate's verdict, is published alongside this essay. The captured snapshots themselves are held back, being third-party copyrighted full text; the hashes let anyone re-capture from the original URLs and confirm the match. Three of the seven conclusions are formally mixed-stance, meaning the underlying sources disagree; each is presented above with the disagreement rather than a chosen side. A claim-auditing pass using an independent reviewer that never sees the narrative was not run; load-bearing claims were audited by re-reading surrounding passages instead, which is a weaker check and is recorded as one.
+
+© 2026 Anuj Sadani. This essay is licensed under CC BY-NC-ND 4.0, share it with credit, not commercially, and without redistributing modified versions. Quoted passages from the works listed above remain the property of their publishers and are reproduced here for citation and verification. Source ledgers and the typeset edition: github.com/asadani/abundant-and-uncurated.

@@ -1,0 +1,13 @@
+A Scarcity of Permission.
+
+The premise underneath all of this is that high-quality human data is running out. It is worth checking, because the claim blends two different phenomena that call for opposite responses.
+
+The forecast. If current trends continue, models will be trained on datasets roughly equal in size to the stock of public human text data between 2026 and 2032, or slightly earlier if models are overtrained. This is a projection rather than an observation, and its authors are an organisation whose visibility depends on scaling forecasts being newsworthy. It has not happened yet.
+
+The measurement. More than twenty-eight per cent of the most actively maintained, critical sources in the C4 corpus have become fully restricted from use through robots.txt. This is not a forecast. It is an audit of something that already occurred.
+
+These should not be blended, because only one of them is a data problem. Exhaustion is a supply constraint that better curation could in principle address, more efficient use of what exists. Consent withdrawal is a governance phenomenon that curation effort cannot touch at all, because the data still exists in full and is simply no longer permitted.
+
+Which reframes the essay's own premise. A significant part of the scarcity in "abundant but uncurated" is not scarcity of text. It is scarcity of permission, and the response to that is legal and commercial, not technical.
+
+The web did not run out of words. It started saying no.

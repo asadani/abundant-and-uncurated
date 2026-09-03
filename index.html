@@ -1542,5 +1542,81 @@
 <!-- /BOOK-FORGE:ABOUT -->
 
 <!-- BOOK-FORGE:BEFORE-END -->
+<!-- BOOK-AUDIO:BEGIN -->
+<style>#bookaudio{position:fixed;right:18px;bottom:18px;z-index:9999;max-width:min(340px,calc(100vw - 36px));
+ font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#F2EEE7}
+#bookaudio *{box-sizing:border-box}
+#bookaudio .ba-card{background:#1A1611;border:1px solid #3A322A;border-radius:10px;
+ box-shadow:0 8px 30px -10px rgba(0,0,0,.55);overflow:hidden}
+#bookaudio .ba-head{display:flex;align-items:center;gap:9px;padding:10px 12px;cursor:pointer;
+ background:none;border:0;width:100%;text-align:left;color:inherit;font:inherit}
+#bookaudio .ba-head:hover{background:#221D17}
+#bookaudio .ba-ico{flex:none;width:22px;height:22px;border-radius:50%;background:#C85C2D;
+ display:grid;place-items:center;font-size:10px;color:#fff}
+#bookaudio .ba-t{flex:1;min-width:0}
+#bookaudio .ba-t b{display:block;font-weight:600;font-size:12.5px}
+#bookaudio .ba-t span{display:block;color:#A39C90;font-size:11px;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bookaudio .ba-chev{flex:none;color:#A39C90;transition:transform .18s}
+#bookaudio[data-open="1"] .ba-chev{transform:rotate(180deg)}
+#bookaudio .ba-body{display:none;border-top:1px solid #3A322A}
+#bookaudio[data-open="1"] .ba-body{display:block}
+#bookaudio audio{width:100%;display:block;background:#221D17}
+#bookaudio ol{list-style:none;margin:0;padding:4px;max-height:min(46vh,340px);overflow:auto}
+#bookaudio li{margin:0}
+#bookaudio .ba-tr{display:flex;gap:8px;width:100%;padding:7px 8px;background:none;border:0;
+ border-radius:6px;color:#D8D2C8;font:inherit;text-align:left;cursor:pointer}
+#bookaudio .ba-tr:hover{background:#221D17;color:#F2EEE7}
+#bookaudio .ba-tr[aria-current="true"]{background:#2C1E14;color:#F0A079}
+#bookaudio .ba-n{flex:none;width:18px;color:#7A7468;font-variant-numeric:tabular-nums}
+#bookaudio .ba-nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#bookaudio .ba-d{flex:none;color:#7A7468;font-variant-numeric:tabular-nums}
+@media (max-width:560px){#bookaudio{left:12px;right:12px;bottom:12px;max-width:none}}
+@media print{#bookaudio{display:none!important}}</style>
+<aside id="bookaudio" data-open="0" aria-label="Listen to this book">
+  <div class="ba-card">
+    <button class="ba-head" type="button" aria-expanded="false">
+      <span class="ba-ico" aria-hidden="true">&#9654;</span>
+      <span class="ba-t"><b>Listen &middot; 10 tracks, 33 min</b><span></span></span>
+      <span class="ba-chev" aria-hidden="true">&#9650;</span>
+    </button>
+    <div class="ba-body">
+      <audio controls preload="none"></audio>
+      <ol>
+        <li><button class="ba-tr" type="button" data-src="audio/00-the-argument-in-five-minutes.mp3"><span class="ba-n">1</span><span class="ba-nm">The argument in five minutes</span><span class="ba-d">3:20</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/01-the-collapse-that-wasn-t.mp3"><span class="ba-n">2</span><span class="ba-nm">The collapse that wasn t</span><span class="ba-d">2:40</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/02-the-verifier-s-knowledge-centre.mp3"><span class="ba-n">3</span><span class="ba-nm">The verifier s knowledge centre</span><span class="ba-d">1:46</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/03-where-synthetic-earns-its-place.mp3"><span class="ba-n">4</span><span class="ba-nm">Where synthetic earns its place</span><span class="ba-d">3:32</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/04-the-price-of-judgement.mp3"><span class="ba-n">5</span><span class="ba-nm">The price of judgement</span><span class="ba-d">2:45</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/05-the-rubric-problem.mp3"><span class="ba-n">6</span><span class="ba-nm">The rubric problem</span><span class="ba-d">2:57</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/06-a-scarcity-of-permission.mp3"><span class="ba-n">7</span><span class="ba-nm">A scarcity of permission</span><span class="ba-d">1:39</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/07-the-division-of-labour.mp3"><span class="ba-n">8</span><span class="ba-nm">The division of labour</span><span class="ba-d">3:16</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/08-what-did-not-survive.mp3"><span class="ba-n">9</span><span class="ba-nm">What did not survive</span><span class="ba-d">3:27</span></button></li>
+        <li><button class="ba-tr" type="button" data-src="audio/09-notes-sources.mp3"><span class="ba-n">10</span><span class="ba-nm">Notes sources</span><span class="ba-d">7:28</span></button></li>
+      </ol>
+    </div>
+  </div>
+</aside>
+<script>(function(){
+  var el=document.getElementById('bookaudio'); if(!el) return;
+  var a=el.querySelector('audio'), head=el.querySelector('.ba-head'),
+      sub=el.querySelector('.ba-t span'), rows=[].slice.call(el.querySelectorAll('.ba-tr'));
+  var cur=-1;
+  head.addEventListener('click',function(){
+    el.setAttribute('data-open', el.getAttribute('data-open')==='1'?'0':'1');
+  });
+  function select(i,play){
+    if(i<0||i>=rows.length) return;
+    cur=i;
+    rows.forEach(function(r,j){ r.setAttribute('aria-current', j===i?'true':'false'); });
+    a.src=rows[i].getAttribute('data-src');
+    sub.textContent=rows[i].querySelector('.ba-nm').textContent;
+    if(play) a.play().catch(function(){});
+  }
+  rows.forEach(function(r,i){ r.addEventListener('click',function(){ select(i,true); }); });
+  a.addEventListener('ended',function(){ if(cur+1<rows.length) select(cur+1,true); });
+  select(0,false);
+})();</script>
+<!-- BOOK-AUDIO:END -->
 </body>
 </html>

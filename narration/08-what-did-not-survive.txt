@@ -1,0 +1,29 @@
+What Did Not Survive.
+
+This essay was assembled under a verification discipline, and the discipline is worth describing because it changed the argument twice and rejected two claims outright.
+
+Every source was captured to disk before being cited, and hashed. Every factual claim was bound to an exact quoted passage inside one of those captured files, and the binding was checked mechanically, not against the live URL, and not against memory of the page. Claims that could not be bound were marked failed and kept in the ledger rather than quietly dropped.
+
+Forty-five claims were written; forty-three passed and are cited here. Fifty-seven bindings were checked against twenty-seven captured snapshots, with zero mismatches. Twenty-two distinct works underpin the essay: nine peer-reviewed, thirteen preprints or conference papers, no press coverage, and, importantly, no systematic review with a registered protocol. Nothing here carries meta-analytic support.
+
+Two claims were rejected
+
+"Golden datasets built from production traces reflect real usage in a way synthetic test cases cannot." Widely repeated in practitioner writing. The nearest captured source runs the other way, noting that real-world data is noisy and unbalanced and may overlook rare but critical edge cases.
+
+"A layered LLM-annotator, judge, synthetic gap-fill and human-review pipeline is now standard practice." "Standard" is an empirical claim about industry adoption. It would need a practitioner survey, and none exists in this corpus.
+
+Two findings emerged only from reading past the abstract
+
+Both changed the argument. The paper stating that a verifier "whether a human or a better model" prevents collapse reads, at abstract level, as though the two are interchangeable. Two sentences later it states that gains plateau or reverse unless the verifier is perfectly reliable, and that retraining converges on the verifier's knowledge centre. That inversion became Chapter II.
+
+And the self-play result that beats expert-curated human data does so by 0.3 absolute percentage points. The headline survives; the decisiveness does not. A summary that stopped at the abstract would have reported a rout.
+
+The knowledge-centre bound, the formal basis of Chapter II, rests on one preprint at small scale.
+
+The strongest verification evidence is from code, where ground truth is free. Generalisation to tone and safety is directional, not established.
+
+Copyright and licensing; privacy regulation; non-text modalities; data-market economics. The common claim that synthetic data wins in health and finance was not assessed and should not be inferred from this text.
+
+Aroyo and Welty, the standard treatment of annotator disagreement as signal rather than noise, was paywalled and could not be obtained. It is not cited, and Chapter IV is weaker for its absence.
+
+Unknowable from public sources: what frontier labs currently spend on human data, and the present ratio of synthetic to human data in frontier training mixes. The closest public figure is self-reported and three years old.

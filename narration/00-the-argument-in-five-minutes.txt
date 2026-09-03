@@ -1,0 +1,17 @@
+The Argument in Five Minutes.
+
+Everyone agrees that data is abundant and that good data is scarce. The usual explanation is that curation is slow, expensive and unglamorous, and that better tooling will eventually fix it. That explanation is comfortable and it is wrong in an important way.
+
+Start with the received wisdom, because it collapses quickly. The popular case for keeping humans in the loop is that human judgement is simply better. It is not. In a peer-reviewed comparison, a language model beat crowd workers on annotation accuracy by roughly twenty-five percentage points, at under a third of a cent per annotation, about thirty times cheaper than the human alternative. Strong model judges agree with human preferences more than eighty per cent of the time, which is the rate at which humans agree with each other. Any argument for the human that rests on comparative accuracy has already lost.
+
+Two mechanisms, neither about accuracy, hold the line.
+
+The first is informational. A synthetic loop that verifies itself with a model converges on what that verifier already knows, the retraining process drives the estimate toward the verifier's own knowledge centre, and gains plateau or reverse unless the verifier is perfectly reliable. A closed loop of models redistributes information. It does not create any. The human is not in the loop as a quality check. The human is in the loop as the only unbounded source of new information.
+
+The second is structural. Evaluation criteria cannot be fully specified before a human has looked at outputs. The dependency is circular: you need criteria in order to grade, and grading is how you discover the criteria. Every result showing machines matching humans measures performance against a fixed rubric, and the rubric is precisely the artefact that cannot be fixed in advance. A better model makes the applying cheaper. It does not remove the step that comes first.
+
+Curation resists automation for reasons that better tooling does not touch. Its failures are invisible at the time of the work: data cascades are opaque and delayed, with poor indicators and metrics, which means there is no contemporaneous quality signal to automate against. And curation is normative rather than clerical, annotation instructions reproduce and normalise the worldviews of whoever commissioned them. It encodes a position on what the right answer is. That is not a transcription task, and it never becomes one.
+
+Machines should absorb the application of judgement, where they are demonstrably accurate and radically cheaper. Humans own two things that cannot be delegated: the formation of the criteria, and the supply of signal from outside the system. The thesis, and the counter-evidence is real
+
+The honest counter-case is not hypothetical. One system reached state-of-the-art reasoning performance trained by self-play with no human-curated data at all. That result is addressed head-on in Chapter III rather than managed. Its margin is 0.3 percentage points, and it works because a code executor hands it free ground truth, a luxury that exists for arithmetic and does not exist for tone.

@@ -1,0 +1,31 @@
+The Rubric Problem.
+
+Here is where the sources genuinely disagree, so the disagreement goes first and the reconciliation second. Anything else would be advocacy.
+
+The case against the human
+
+It is strong. Model judges match human-human agreement rates, exceeding eighty per cent. Models beat crowd workers on annotation accuracy by roughly twenty-five percentage points. And they do it at under a third of a cent per annotation, about thirty times cheaper than the human alternative.
+
+What automation demonstrably wins
+
+The case for the human
+
+It rests on one finding, and the finding is structural rather than comparative. It is impossible to completely determine evaluation criteria prior to human judging of model outputs. The circularity has a name, criteria drift: users need criteria in order to grade outputs, and grading outputs is what allows them to define the criteria.
+
+The obvious objection is to grade first and specify afterwards. It was tested, and it does not hold: participants who graded before specifying criteria still refined those criteria on further grading. The loop does not terminate by reordering it.
+
+The two bodies of evidence are not in conflict, because they measure different things. Every result favouring automation measures performance against a fixed rubric. And the rubric is precisely the artefact that cannot be fixed in advance.
+
+Criteria formation, discovering what should be measured at all, which requires looking at outputs first.
+
+Exogenous signal, supplying information the system does not already contain.
+
+Criteria application, grading at volume against a settled rubric, where machines match human agreement rates.
+
+First-pass labelling, where accuracy is higher and cost is thirtyfold lower.
+
+This distinction is worth holding onto because it is a claim about logic, not about capability. It does not say models are not yet good enough at judging. It says the specification of what counts as good cannot be completed before the examining happens. A more capable model makes the applying cheaper; it does not remove the step that precedes it. The conclusion would fall if someone demonstrated stable criteria formation without human grading, and that is the experiment to watch for.
+
+A note on citation hygiene
+
+The paper reporting agreement above eighty per cent is the same paper documenting that model judges exhibit position bias, verbosity bias, self-enhancement bias and limited reasoning ability. The headline figure and the failure taxonomy come from one source. They should always travel together, and in practice the first travels alone.

@@ -1,0 +1,25 @@
+The Division of Labour.
+
+The proposition that data is abundant while high-quality curated data is scarce is correct. The reasons are more structural than the usual account of effort and process suggests, and the prescription that follows is narrower than "keep humans in the loop."
+
+Curation is expensive because its failures are undetectable at the time of the work and because it encodes contested judgement rather than recording facts. Neither of those is fixed by better tooling, which is why the cost has stayed stubborn while everything around it got cheaper.
+
+Machines should absorb the application of judgement at scale, where they are demonstrably accurate and radically cheaper. Humans should own two things that cannot be delegated: the formation of the criteria, because criteria cannot be specified before outputs are examined; and the supply of exogenous signal, because a loop verified by models converges on what those models already know. Held at moderate confidence, and contested
+
+Two independent mechanisms converge on this, which is the main reason to believe it. A synthetic loop guided by a model verifier converges on that verifier's knowledge centre, so a closed system of models redistributes information without creating any. And evaluation criteria cannot be fully specified before outputs are examined, so the definition of quality cannot be handed over in advance. The first is informational; the second is logical. They do not depend on each other, and they point the same way.
+
+What this changes in practice
+
+Treat curation as a permanent operating cost, not a capital project that finishes. The weekly cadence of frontier preference collection is the shape to plan for.
+
+Put humans where criteria are formed, not where labels are produced. Machines are better and cheaper at application; they cannot do formation at all.
+
+Generate freely, but assume the gain is bounded by verification strength. Unfiltered volume is not an asset, and weak filtering is not verification.
+
+Treat the consent withdrawal as a first-order constraint. No amount of curation skill recovers data you are not permitted to use.
+
+The conclusion is held at moderate confidence and it is formally contested. The strongest counter-evidence, state-of-the-art reasoning learned with no human data, is real. Its scope condition, a code executor providing ground truth, is exactly the condition that does not hold in the domains where curation is hardest. But that is a bound, not a refutation, and the bound could be loosened by better automated verifiers in domains that currently have none.
+
+The falsifying experiment is specific: a domain with no formal correctness oracle, in which self-generated data improves a model across many generations with no human signal at any point. If that lands, this essay is wrong, and the honest thing is to say so in advance rather than after.
+
+The machine can tell you whether the answer fits the rule. It cannot tell you the rule was worth having.
