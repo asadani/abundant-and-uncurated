@@ -747,88 +747,6 @@
 
 <!-- BOOK-FORGE:AFTER-COVER -->
 
-<section class="overture">
-  <h2 class="part">Overture</h2>
-  <h2 class="chapter-title">The Argument in Five Minutes</h2>
-
-  <div class="script">
-    <p class="lead dropcap">Everyone agrees that data is abundant and that good data is scarce.
-    The usual explanation is that curation is slow, expensive and unglamorous, and that better
-    tooling will eventually fix it. That explanation is comfortable and it is wrong in an
-    important way.</p>
-
-    <p>Start with the received wisdom, because it collapses quickly. The popular case for keeping
-    humans in the loop is that human judgement is simply better. It is not. In a peer-reviewed
-    comparison, a language model beat crowd workers on annotation accuracy by roughly twenty-five
-    percentage points, at under a third of a cent per annotation &mdash; about thirty times
-    cheaper than the human alternative.<sup class="cite">22</sup> Strong model judges agree with
-    human preferences more than eighty per cent of the time, which is the rate at which humans
-    agree with each other.<sup class="cite">7</sup> Any argument for the human that rests on
-    comparative accuracy has already lost.</p>
-
-    <div class="beat">The argument that survives</div>
-
-    <p>Two mechanisms, neither about accuracy, hold the line.</p>
-
-    <p><strong>The first is informational.</strong> A synthetic loop that verifies itself with a
-    model converges on what that verifier already knows &mdash; the retraining process drives the
-    estimate toward the verifier&rsquo;s own knowledge centre, and gains plateau or reverse unless
-    the verifier is perfectly reliable.<sup class="cite">16</sup> A closed loop of models
-    redistributes information. It does not create any. The human is not in the loop as a quality
-    check. The human is in the loop as the only unbounded source of new information.</p>
-
-    <p><strong>The second is structural.</strong> Evaluation criteria cannot be fully specified
-    before a human has looked at outputs.<sup class="cite">8</sup> The dependency is circular:
-    you need criteria in order to grade, and grading is how you discover the criteria. Every
-    result showing machines matching humans measures performance against a <em>fixed rubric</em>
-    &mdash; and the rubric is precisely the artefact that cannot be fixed in advance. A better
-    model makes the applying cheaper. It does not remove the step that comes first.</p>
-
-    <div class="beat">Why curation stays expensive</div>
-
-    <p>Curation resists automation for reasons that better tooling does not touch. Its failures
-    are invisible at the time of the work: data cascades are opaque and delayed, with poor
-    indicators and metrics,<sup class="cite">13</sup> which means there is no contemporaneous
-    quality signal to automate against. And curation is normative rather than clerical &mdash;
-    annotation instructions reproduce and normalise the worldviews of whoever commissioned
-    them.<sup class="cite">18</sup> It encodes a position on what the right answer is. That is not
-    a transcription task, and it never becomes one.</p>
-
-    <div class="beat">The verdict</div>
-
-    <blockquote class="pull">Machines should absorb the application of judgement, where they are
-    demonstrably accurate and radically cheaper. Humans own two things that cannot be delegated:
-    the formation of the criteria, and the supply of signal from outside the system.
-    <span class="who">The thesis &mdash; and the counter-evidence is real</span></blockquote>
-
-    <p>The honest counter-case is not hypothetical. One system reached state-of-the-art reasoning
-    performance trained by self-play with no human-curated data at all.<sup class="cite">17</sup>
-    That result is addressed head-on in Chapter III rather than managed. Its margin is
-    0.3 percentage points, and it works because a code executor hands it free ground truth
-    &mdash; a luxury that exists for arithmetic and does not exist for tone.</p>
-  </div>
-</section>
-
-<!-- ============================ TOC ============================ -->
-<section class="toc">
-  <h2 class="part">Contents</h2>
-  <h2 class="chapter-title">What&rsquo;s inside</h2>
-  <ol>
-    <li><span class="n">&mdash;</span><span class="t">Overture: The Argument in Five Minutes</span><span class="d">the whole case, compressed</span></li>
-    <li><span class="n">I</span><span class="t">The Collapse That Wasn&rsquo;t</span><span class="d">a regime, not a fact about synthetic data</span></li>
-    <li><span class="n">II</span><span class="t">The Verifier&rsquo;s Knowledge Centre</span><span class="d">why a model cannot bootstrap itself</span></li>
-    <li><span class="n">III</span><span class="t">Where Synthetic Earns Its Place</span><span class="d">and the strongest case against this essay</span></li>
-    <li><span class="n">IV</span><span class="t">The Price of Judgement</span><span class="d">why curation resists automation</span></li>
-    <li><span class="n">V</span><span class="t">The Rubric Problem</span><span class="d">what machines can and cannot take over</span></li>
-    <li><span class="n">VI</span><span class="t">A Scarcity of Permission</span><span class="d">the data is not running out the way you think</span></li>
-    <li><span class="n">VII</span><span class="t">The Division of Labour</span><span class="d">the verdict, and what would break it</span></li>
-    <li><span class="n">A</span><span class="t">Appendix: What Did Not Survive</span><span class="d">the method, and two rejected claims</span></li>
-    <li><span class="n">&mdash;</span><span class="t">Notes &amp; Sources</span><span class="d">twenty-two works, tiered</span></li>
-  </ol>
-</section>
-
-<!-- ============================ CH I ============================ -->
-
 <!-- BOOK-AUDIO:BEGIN -->
 <style>.ba{--ba-warm:#FBF8F3;--ba-warm-2:#F4EFE7;--ba-line:#E4DCD0;--ba-dim:#8A8175;
  margin:40px auto;max-width:35em;border:1px solid var(--ba-line);border-radius:10px;
@@ -1042,6 +960,89 @@ body.ba-bar-open{padding-bottom:56px}
   select(0, false);
 })();</script>
 <!-- BOOK-AUDIO:END -->
+
+<section class="overture">
+  <h2 class="part">Overture</h2>
+  <h2 class="chapter-title">The Argument in Five Minutes</h2>
+
+  <div class="script">
+    <p class="lead dropcap">Everyone agrees that data is abundant and that good data is scarce.
+    The usual explanation is that curation is slow, expensive and unglamorous, and that better
+    tooling will eventually fix it. That explanation is comfortable and it is wrong in an
+    important way.</p>
+
+    <p>Start with the received wisdom, because it collapses quickly. The popular case for keeping
+    humans in the loop is that human judgement is simply better. It is not. In a peer-reviewed
+    comparison, a language model beat crowd workers on annotation accuracy by roughly twenty-five
+    percentage points, at under a third of a cent per annotation &mdash; about thirty times
+    cheaper than the human alternative.<sup class="cite">22</sup> Strong model judges agree with
+    human preferences more than eighty per cent of the time, which is the rate at which humans
+    agree with each other.<sup class="cite">7</sup> Any argument for the human that rests on
+    comparative accuracy has already lost.</p>
+
+    <div class="beat">The argument that survives</div>
+
+    <p>Two mechanisms, neither about accuracy, hold the line.</p>
+
+    <p><strong>The first is informational.</strong> A synthetic loop that verifies itself with a
+    model converges on what that verifier already knows &mdash; the retraining process drives the
+    estimate toward the verifier&rsquo;s own knowledge centre, and gains plateau or reverse unless
+    the verifier is perfectly reliable.<sup class="cite">16</sup> A closed loop of models
+    redistributes information. It does not create any. The human is not in the loop as a quality
+    check. The human is in the loop as the only unbounded source of new information.</p>
+
+    <p><strong>The second is structural.</strong> Evaluation criteria cannot be fully specified
+    before a human has looked at outputs.<sup class="cite">8</sup> The dependency is circular:
+    you need criteria in order to grade, and grading is how you discover the criteria. Every
+    result showing machines matching humans measures performance against a <em>fixed rubric</em>
+    &mdash; and the rubric is precisely the artefact that cannot be fixed in advance. A better
+    model makes the applying cheaper. It does not remove the step that comes first.</p>
+
+    <div class="beat">Why curation stays expensive</div>
+
+    <p>Curation resists automation for reasons that better tooling does not touch. Its failures
+    are invisible at the time of the work: data cascades are opaque and delayed, with poor
+    indicators and metrics,<sup class="cite">13</sup> which means there is no contemporaneous
+    quality signal to automate against. And curation is normative rather than clerical &mdash;
+    annotation instructions reproduce and normalise the worldviews of whoever commissioned
+    them.<sup class="cite">18</sup> It encodes a position on what the right answer is. That is not
+    a transcription task, and it never becomes one.</p>
+
+    <div class="beat">The verdict</div>
+
+    <blockquote class="pull">Machines should absorb the application of judgement, where they are
+    demonstrably accurate and radically cheaper. Humans own two things that cannot be delegated:
+    the formation of the criteria, and the supply of signal from outside the system.
+    <span class="who">The thesis &mdash; and the counter-evidence is real</span></blockquote>
+
+    <p>The honest counter-case is not hypothetical. One system reached state-of-the-art reasoning
+    performance trained by self-play with no human-curated data at all.<sup class="cite">17</sup>
+    That result is addressed head-on in Chapter III rather than managed. Its margin is
+    0.3 percentage points, and it works because a code executor hands it free ground truth
+    &mdash; a luxury that exists for arithmetic and does not exist for tone.</p>
+  </div>
+</section>
+
+<!-- ============================ TOC ============================ -->
+<section class="toc">
+  <h2 class="part">Contents</h2>
+  <h2 class="chapter-title">What&rsquo;s inside</h2>
+  <ol>
+    <li><span class="n">&mdash;</span><span class="t">Overture: The Argument in Five Minutes</span><span class="d">the whole case, compressed</span></li>
+    <li><span class="n">I</span><span class="t">The Collapse That Wasn&rsquo;t</span><span class="d">a regime, not a fact about synthetic data</span></li>
+    <li><span class="n">II</span><span class="t">The Verifier&rsquo;s Knowledge Centre</span><span class="d">why a model cannot bootstrap itself</span></li>
+    <li><span class="n">III</span><span class="t">Where Synthetic Earns Its Place</span><span class="d">and the strongest case against this essay</span></li>
+    <li><span class="n">IV</span><span class="t">The Price of Judgement</span><span class="d">why curation resists automation</span></li>
+    <li><span class="n">V</span><span class="t">The Rubric Problem</span><span class="d">what machines can and cannot take over</span></li>
+    <li><span class="n">VI</span><span class="t">A Scarcity of Permission</span><span class="d">the data is not running out the way you think</span></li>
+    <li><span class="n">VII</span><span class="t">The Division of Labour</span><span class="d">the verdict, and what would break it</span></li>
+    <li><span class="n">A</span><span class="t">Appendix: What Did Not Survive</span><span class="d">the method, and two rejected claims</span></li>
+    <li><span class="n">&mdash;</span><span class="t">Notes &amp; Sources</span><span class="d">twenty-two works, tiered</span></li>
+  </ol>
+</section>
+
+<!-- ============================ CH I ============================ -->
+
 
 <section class="chapter">
   <div class="chapter-num">I</div>
